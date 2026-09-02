@@ -1,26 +1,28 @@
-# CARROM CLASH
+# Carrom Clash
 
-Premium standalone HTML5 Carrom browser game.
-
-## Features
-- VS Computer, 2 Player, 4 Player modes
-- Canvas physics, collisions, pockets, striker aiming
-- Queen, scoring, timer, fouls, rematch
-- Responsive mobile/tablet/desktop UI
-- LocalStorage career stats
-- No Node.js, npm, Python, backend or build step
-- Works from `index.html` and is Vercel/GitHub Pages ready
+Mobile-first standalone HTML5/Canvas carrom game.
 
 ## Run
-Open `index.html` directly or use VS Code Live Server.
+Open `index.html` directly or deploy the **contents of this folder** to GitHub Pages/Vercel. No Node, npm, Python or build step is required.
 
-## Known limitations / deliberate scope
-This is an offline arcade-style carrom implementation. It does not claim tournament-grade simulation, online networking, accounts, payments, or server-side matchmaking.
+## Controls
+Touch/mouse: press the striker, drag away to aim/power, release to shoot.
 
-## QA checklist
-- No external asset dependency
-- No inline CSS
-- Pointer/touch input supported
-- Responsive breakpoint at 600px and 900px
-- Game state reset and home navigation implemented
-- LocalStorage failures are naturally non-fatal because the game can continue in memory
+## Modes
+- VS Computer
+- 2 Player Duel
+- 4 Player Clash
+
+## QA fixes
+- Fixed shot lifecycle and animation loop.
+- Fixed striker/coin pocket handling and foul detection.
+- Fixed turn progression after pieces stop.
+- Fixed timer interaction during an active shot.
+- Fixed pointer cancel handling for mobile.
+- Fixed stale animation state between matches.
+- Fixed end-game detection.
+- Added safe initialization when opening the page directly.
+- No external assets or dependencies.
+
+## GitHub Pages
+Important: `index.html`, `css/`, and `js/` must be at the deployed site root. The ZIP itself should not be uploaded as the website root.
